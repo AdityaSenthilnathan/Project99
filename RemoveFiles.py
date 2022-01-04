@@ -28,7 +28,7 @@ if os.path.exists(path):
            ctimef = os.stat(folderpath).st_ctime
            if (seconds - ctimef > (days * 24*60*60)):
                print("Time is greater then the days")
-               os.remove(folderpath)
+               shutil.rmtree(folderpath)
            else:
                print("Time not greater")    
 
